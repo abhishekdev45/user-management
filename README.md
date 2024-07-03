@@ -68,7 +68,10 @@ git clone https://github.com/your-username/project-name.git
 
 ###Accessing the Application
 
-You can now access the application by visiting http://localhost:3000 in your web browser.
+- You can now access the application by visiting http://localhost:3000 in your web browser.
+- By Default Login page will open.
+- Click on Register to register new user.
+  
 
 ### Additional Notes
 - Ensure your MongoDB server is running and accessible with the provided MONGO_URI.
