@@ -1,9 +1,9 @@
 import React from "react";
 
 const ContactList = ({ contacts, onEditContact, onDeleteContact, isAdmin }) => {
-  console.log(contacts);
+  
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {contacts.map((contact) => (
         <div key={contact._id} className="bg-white rounded-lg shadow-md p-4 m-2">
           <p className="text-lg font-semibold">
