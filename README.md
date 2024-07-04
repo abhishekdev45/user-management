@@ -20,7 +20,7 @@ Ensure you have Node.js and npm installed on your local development machine.
 Clone the project repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/project-name.git
+git clone https://github.com/your-username/user-management.git
 ```
 
 ### Backend Setup
