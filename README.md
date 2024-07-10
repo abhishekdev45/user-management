@@ -71,7 +71,7 @@ git clone https://github.com/abhishekdev45/user-management.git
 - You can now access the application by visiting http://localhost:3000 in your web browser.
 - By Default Login page will open.
 - Click on Register to register new user.
-- Change registered user role to admin from your mongodb ui.Use this id to see admin features.
+- Change registered user role to Admin from your mongodb ui.Use this id to see admin features.
   
   
 
