@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { validateFirstName, validateLastName, validateEmail, validatePassword } from '../utils/validationUtils';
-
+import React, { useState, useEffect } from "react";
+import {
+  validateFirstName,
+  validateLastName,
+  validateEmail,
+  validatePassword,
+} from "../utils/validationUtils";
 
 const ContactForm = ({ onAddContact, contact }) => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [role, setRole] = useState('user');
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [role, setRole] = useState("user");
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -15,14 +19,14 @@ const ContactForm = ({ onAddContact, contact }) => {
       setFirstName(contact.firstName);
       setLastName(contact.lastName);
       setEmail(contact.email);
-      setPassword(contact.password); 
+      setPassword(contact.password);
       setRole(contact.role);
     } else {
-      setFirstName('');
-      setLastName('');
-      setEmail('');
-      setPassword('');
-      setRole('user');
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPassword("");
+      setRole("user");
     }
   }, [contact]);
 
@@ -52,20 +56,26 @@ const ContactForm = ({ onAddContact, contact }) => {
     onAddContact(newContact);
 
     if (!contact) {
-      setFirstName('');
-      setLastName('');
-      setEmail('');
-      setPassword('');
-      setRole('user');
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPassword("");
+      setRole("User");
     }
     setError(null);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-md mx-auto">
+    <form
+      onSubmit={handleSubmit}
+      className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-md mx-auto"
+    >
       {error && <div className="mb-4 text-red-500">{error}</div>}
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">
+        <label
+          className="block text-gray-700 text-sm font-bold mb-2"
+          htmlFor="firstName"
+        >
           First Name
         </label>
         <input
@@ -78,7 +88,10 @@ const ContactForm = ({ onAddContact, contact }) => {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="lastName">
+        <label
+          className="block text-gray-700 text-sm font-bold mb-2"
+          htmlFor="lastName"
+        >
           Last Name
         </label>
         <input
@@ -91,7 +104,10 @@ const ContactForm = ({ onAddContact, contact }) => {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+        <label
+          className="block text-gray-700 text-sm font-bold mb-2"
+          htmlFor="email"
+        >
           Email
         </label>
         <input
@@ -104,7 +120,10 @@ const ContactForm = ({ onAddContact, contact }) => {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+        <label
+          className="block text-gray-700 text-sm font-bold mb-2"
+          htmlFor="password"
+        >
           Password
         </label>
         <input
@@ -117,14 +136,16 @@ const ContactForm = ({ onAddContact, contact }) => {
         />
       </div>
       <div className="mb-6">
-        <label className="block text-gray-700 text-sm font-bold mb-2">Role</label>
+        <label className="block text-gray-700 text-sm font-bold mb-2">
+          Role
+        </label>
         <div>
           <label className="inline-flex items-center mr-4">
             <input
               type="radio"
-              value="user"
-              checked={role === 'user'}
-              onChange={() => setRole('user')}
+              value="User"
+              checked={role === "User"}
+              onChange={() => setRole("User")}
               className="form-radio h-4 w-4 text-blue-500"
             />
             <span className="ml-2 text-gray-700">User</span>
@@ -132,9 +153,9 @@ const ContactForm = ({ onAddContact, contact }) => {
           <label className="inline-flex items-center">
             <input
               type="radio"
-              value="admin"
-              checked={role === 'admin'}
-              onChange={() => setRole('admin')}
+              value="Admin"
+              checked={role === "Admin"}
+              onChange={() => setRole("Admin")}
               className="form-radio h-4 w-4 text-blue-500"
             />
             <span className="ml-2 text-gray-700">Admin</span>
@@ -142,8 +163,11 @@ const ContactForm = ({ onAddContact, contact }) => {
         </div>
       </div>
       <div className="flex items-center justify-between">
-        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-          {contact ? 'Update Contact' : 'Add Contact'}
+        <button
+          type="submit"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >
+          {contact ? "Update Contact" : "Add Contact"}
         </button>
       </div>
     </form>

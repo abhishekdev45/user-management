@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const bcrypt = require("bcrypt");
 const {
   validateFirstName,
   validateLastName,
@@ -67,7 +68,7 @@ const createUser = async (req, res) => {
       firstName,
       lastName,
       email,
-      password : hashedPassword,
+      password: hashedPassword,
       role,
     });
 
