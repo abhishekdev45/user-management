@@ -20,7 +20,7 @@ Ensure you have Node.js and npm installed on your local development machine.
 Clone the project repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/project-name.git
+git clone https://github.com/abhishekdev45/user-management.git
 ```
 
 ### Backend Setup
@@ -66,11 +66,13 @@ git clone https://github.com/your-username/project-name.git
    ```
    The frontend server will start running on port 3000 by default and open the project in your default web browser.
 
-###Accessing the Application
+### Accessing the Application
 
 - You can now access the application by visiting http://localhost:3000 in your web browser.
 - By Default Login page will open.
 - Click on Register to register new user.
+- Change registered user role to Admin from your mongodb atlas. Use this id to see admin features.
+  
   
 
 ### Additional Notes
